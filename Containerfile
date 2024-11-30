@@ -54,6 +54,7 @@ COPY build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
+    rpm-ostree kargs --append='radeon.modeset=0' \
     ostree container commit
     
 # add Radeon Ring Test Failed Error Workaround for older AMD/ATI/SUN XT Cards
