@@ -4,6 +4,9 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
+# add Radeon Ring Test Failed Error Workaround for older AMD/ATI/SUN XT Cards
+rpm-ostree kargs --append=radeon.modeset=0
+
 
 ### Install packages
 
