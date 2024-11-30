@@ -18,6 +18,13 @@ rpm-ostree install screen
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
 
+# add some packages
+rpm-ostree install afpfs-ng
+rpm-ostree install btrfs-assistant
+rpm-ostree install snapper
+rpm-ostree install thinkfan
+rpm-ostree install distrobox
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
